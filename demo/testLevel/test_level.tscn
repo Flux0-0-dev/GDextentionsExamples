@@ -321,10 +321,12 @@ tile_map_data = PackedByteArray("AAABACYAAAADAAAAAAACACYAAAADAAAAAAADACYAAAADAAA
 tile_set = SubResource("TileSet_yratp")
 metadata/_edit_lock_ = true
 
-[node name="Player" type="Player" parent="."]
+[node name="Player" type="Player" parent="." node_paths=PackedStringArray("jump_buffer_timer", "cayote_jump_timer")]
 jump_time_to_peak = 0.35
 jump_time_to_decend = 0.25
-position = Vector2(143, 601)
+jump_buffer_timer = NodePath("jump_buffer")
+cayote_jump_timer = NodePath("cayote_timer")
+position = Vector2(153, 577)
 velocity = Vector2(0, -1000)
 metadata/_edit_group_ = true
 
@@ -340,3 +342,11 @@ zoom = Vector2(4, 4)
 limit_left = -120
 limit_bottom = 720
 position_smoothing_enabled = true
+
+[node name="jump_buffer" type="Timer" parent="Player"]
+wait_time = 0.1
+one_shot = true
+
+[node name="cayote_timer" type="Timer" parent="Player"]
+wait_time = 0.1
+one_shot = true

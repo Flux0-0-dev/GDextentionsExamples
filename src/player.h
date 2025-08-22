@@ -1,5 +1,8 @@
 #pragma once
 #include <godot_cpp/classes/character_body2d.hpp>
+#include <godot_cpp/classes/timer.hpp>
+#include <godot_cpp/classes/input.hpp>
+
 
 using namespace godot;
 
@@ -19,11 +22,18 @@ class Player : public CharacterBody2D{
     float jump_gravity;
     float fall_gravity;
 
+   
 
 protected :
     static void _bind_methods();
 public :    
     Vector2 velocity ;
+
+    Timer* jump_buffer_timer=nullptr; // note: you have to make it a nullptr by default or else it would crash 
+    Timer* cayote_jump_timer=nullptr;
+
+    Input *ipt = Input::get_singleton();
+
     virtual void _physics_process(double p_delta) override;
     virtual void _ready() override;
 
@@ -45,6 +55,14 @@ public :
     float get_jump_time_to_decend() const;
     void set_jump_time_to_decend(float x);
 
+    Timer* get_jump_buffer_timer() const ;
+    void set_jump_buffer_timer( Timer* t);
+    void jump_buffer_handler();
+
+    Timer* get_cayote_timer() const;
+    bool has_cayote=true;
+    void set_cayote_timer(Timer* t);
+    void cayote_handler();
 
     float get_gravity() const;
     Player();
