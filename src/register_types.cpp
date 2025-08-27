@@ -7,6 +7,7 @@
 
 #include "counter.h"
 #include "player.h"
+#include "bullet.h"
 
 using namespace godot;
 
@@ -17,6 +18,7 @@ void initialize_gdextension_types(ModuleInitializationLevel p_level)
 	}
 	GDREGISTER_CLASS(MyCounter);
 	GDREGISTER_RUNTIME_CLASS(Player);
+	GDREGISTER_RUNTIME_CLASS(Bullet);
 }
 
 void uninitialize_gdextension_types(ModuleInitializationLevel p_level) {

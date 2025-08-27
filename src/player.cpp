@@ -57,8 +57,8 @@ void Player::_physics_process(double p_delta){
         velocity.y = Math::lerp(velocity.y, 0.0f, 0.25f);
     }
     velocity.y = Math::clamp(velocity.y,-1000.0f,1000.0f);
-    float direction=ipt->get_axis("left","right");
-    velocity.x=Math::move_toward(velocity.x,max_speed*direction,acc);
+    float direction = ipt->get_axis("left","right");
+    velocity.x = Math::move_toward(velocity.x,max_speed*direction,acc);
     set_velocity(velocity);
     move_and_slide();
 };
