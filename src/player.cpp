@@ -132,7 +132,7 @@ void Player::set_cayote_timer(Timer* t){
 void Player::cayote_handler(){
     if  (is_on_floor()){
         has_cayote=true;
-    }if (!is_on_floor() and has_cayote){
+    }if (!is_on_floor() && has_cayote){
         has_cayote=false;
         cayote_jump_timer->start();
     }

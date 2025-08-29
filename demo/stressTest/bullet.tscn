@@ -1,3 +1,14 @@
-[gd_scene format=3 uid="uid://bn2lo0523tj5n"]
+[gd_scene load_steps=2 format=3 uid="uid://bn2lo0523tj5n"]
+
+[ext_resource type="Script" uid="uid://c7s7ukn35ofbo" path="res://stressTest/bullet.gd" id="1_dj3hc"]
 
 [node name="bullet" type="Node2D"]
+scale = Vector2(5, 5)
+script = ExtResource("1_dj3hc")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
