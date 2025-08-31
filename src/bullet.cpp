@@ -14,22 +14,25 @@ void Bullet::_bind_methods(){
     ClassDB::bind_method(D_METHOD("get_rotation"), &Bullet::get_rotation);
     ClassDB::bind_method(D_METHOD("set_texture","new_text"), &Bullet::set_texture);
     ClassDB::bind_method(D_METHOD("get_texture"), &Bullet::get_texture);
-    ClassDB::bind_method(D_METHOD("set_transform2D","new_transf"), &Bullet::set_transform2D);
+    ClassDB::bind_method(D_METHOD("set_transform2D", "new_transf"), &Bullet::set_transform2D);
     ClassDB::bind_method(D_METHOD("get_transform2D"), &Bullet::get_transform2D);
-    ClassDB::bind_method(D_METHOD("set_updater","new_updater"),&Bullet::set_updater);
-    ClassDB::bind_method(D_METHOD("get_updater"),&Bullet::get_updater);
-    ClassDB::bind_method(D_METHOD("set_velocity","new_vel"),&Bullet::set_velocity);
-    ClassDB::bind_method(D_METHOD("get_velocity"),&Bullet::get_velocity);
-    ClassDB::bind_method(D_METHOD("setup"),&Bullet::setup);
-    ClassDB::bind_method(D_METHOD("set_trect","new_trect"),&Bullet::set_trect);
-    ClassDB::bind_method(D_METHOD("get_trect"),&Bullet::get_trect);
-    
+    ClassDB::bind_method(D_METHOD("set_updater","new_updater"), &Bullet::set_updater);
+    ClassDB::bind_method(D_METHOD("get_updater"), &Bullet::get_updater);
+    ClassDB::bind_method(D_METHOD("set_velocity", "new_vel"), &Bullet::set_velocity);
+    ClassDB::bind_method(D_METHOD("get_velocity"), &Bullet::get_velocity);
+    ClassDB::bind_method(D_METHOD("setup"), &Bullet::setup);
+    ClassDB::bind_method(D_METHOD("set_trect", "new_trect"),&Bullet::set_trect);
+    ClassDB::bind_method(D_METHOD("get_trect"), &Bullet::get_trect);
+    ClassDB::bind_method(D_METHOD("set_age", "new_age"), &Bullet::set_age);
+    ClassDB::bind_method(D_METHOD("get_age"), &Bullet::get_age);
+
 }
 
-void Bullet:: update_position(){
+void Bullet:: update_position(double delta){
     position += velocity;
     set_transform2D(Transform2D(rotation,position));
     rs->canvas_item_set_transform(rcanvas_item,bullet_transform);
+    age -= delta;
 }
 
 void Bullet::setup(){
@@ -97,6 +100,15 @@ void Bullet::set_trect(Rect2 new_trect){
 Rect2 Bullet::get_trect() const {
     return trect;
 }
+
+void Bullet::set_age(double new_age){
+    age=new_age;
+}
+
+double Bullet::get_age() const {
+    return age;
+}
+
 
 Bullet::Bullet(){
 

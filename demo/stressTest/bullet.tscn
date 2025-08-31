@@ -1,14 +1,168 @@
-[gd_scene load_steps=2 format=3 uid="uid://bn2lo0523tj5n"]
+[gd_scene load_steps=3 format=3 uid="uid://bn2lo0523tj5n"]
 
-[ext_resource type="Script" uid="uid://c7s7ukn35ofbo" path="res://stressTest/bullet.gd" id="1_dj3hc"]
+[ext_resource type="Texture2D" uid="uid://co2dv7m65vswi" path="res://sprites/bullet.png" id="1_dj3hc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1u45u"]
+atlas = ExtResource("1_dj3hc")
+region = Rect2(16, 0, 16, 16)
 
 [node name="bullet" type="Node2D"]
-scale = Vector2(5, 5)
-script = ExtResource("1_dj3hc")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 10.0
 one_shot = true
 autostart = true
+
+[node name="bullets_container" type="Node" parent="."]
+
+[node name="BulletUpdater" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater2" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater3" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater4" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater5" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater6" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater7" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater8" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater9" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater10" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater11" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater12" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater13" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater14" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater15" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater16" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater17" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater18" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater19" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater20" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater21" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater22" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater23" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater24" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater25" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater26" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater27" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater28" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater29" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
+
+[node name="BulletUpdater30" type="BulletUpdater" parent="bullets_container"]
+texture = SubResource("AtlasTexture_1u45u")
+texture_rect = Rect2(-4, -4, 8, 8)
+position = Vector2(62, 39)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

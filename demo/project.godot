@@ -10,10 +10,20 @@ config_version=5
 
 [application]
 
-config/name="godot cpp template"
+config/name="Gdextention examples"
 run/main_scene="uid://cj68oiate66j7"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[debug]
+
+settings/stdout/print_fps=true
+
+[display]
+
+window/size/viewport_width=128
+window/size/viewport_height=72
+window/stretch/mode="canvas_items"
 
 [editor]
 

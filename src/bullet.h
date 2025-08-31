@@ -18,6 +18,7 @@ class Bullet:public RefCounted
     GDCLASS(Bullet,RefCounted);
 
     Node2D* updater = nullptr;
+    double age = 10.0;//age in seconds
     // for physics
     PhysicsServer2D *ps = PhysicsServer2D::get_singleton();
     RID rcollision;//  I'll just make every variable with the type RID start with an "'r"
@@ -39,7 +40,7 @@ public:
     Vector2 velocity = Vector2();
     Transform2D bullet_transform = Transform2D();
 
-    void update_position();
+    void update_position(double delta);
     void setup();
 
     void set_transform2D(Transform2D new_transf);
@@ -60,9 +61,13 @@ public:
     void set_updater(Node2D* new_updater);
     Node2D* get_updater() const;
 
+    //  texture rect
     void set_trect(Rect2 new_trect);
     Rect2 get_trect() const ;
 
+    void set_age(double new_age);
+    double get_age() const ;
+    
     Bullet();
     ~Bullet();
 };

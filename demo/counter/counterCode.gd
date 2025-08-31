@@ -10,4 +10,3 @@ func _ready() -> void:
 	my_counter.reset();
 	my_counter.add(7);
 	print(my_counter.get_number());
-	
