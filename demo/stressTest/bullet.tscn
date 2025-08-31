@@ -162,7 +162,7 @@ position = Vector2(62, 39)
 
 [node name="BulletUpdater30" type="BulletUpdater" parent="bullets_container"]
 texture = SubResource("AtlasTexture_1u45u")
-texture_rect = Rect2(-4, -4, 8, 8)
+texture_rect = Rect2(0, 0, 8, 8)
 position = Vector2(62, 39)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
